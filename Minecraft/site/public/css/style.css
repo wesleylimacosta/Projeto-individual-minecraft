@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/minecraft-4');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', "Segoe UI",'Minecraft', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+header {
+  padding: 2px;
+  display: flex;
+  border-bottom: 3px solid #000000;
+  font-family:'Minecraft';
+  background-color: rgb(16, 112, 16);
+}
+
+.dash {
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #000000;
+  
+}
+
+
+.dash .container {
+  margin: 0 auto;
+  margin-right: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family:'Minecraft';
+}
+
+
+.agora {
+  font-weight: 800;
+}
+
+ .esquerda{
+  margin-top: 20px;
+  margin-left: 12%;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  color: #fff;
+
+}
+
+.navbar {
+  margin-left: 40px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #fff;
+}
+
+
+.titulo {
+  color: #fff;
+  margin-left: 5%;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+
+/* BANNER */
+
+.banner {
+  height: fit-content;
+  padding: 50px 0;
+  color: white;
+  background-image: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/f2/Dirt_background_BE1.png/revision/latest?cb=20210820093527');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.banner .container {
+  font-size: 50px;
+  height: 200px;
+  text-align: justify;
+  margin-left:200px;
+  margin-top: 100px;
+  font-family: 'Minecraft';
+}
+
+.tamanho-conteudo { 
+  height: fit-content !important;
+}
+
+.banner .container span {
+  font-weight: 800;
+}
+
+/* missao visao valores */
+
+.social {
+  background-color: #e5e5e5;
+  display: flex;
+}
+
+.social .container{
+  justify-content: center;
+}
+
+.box img {
+  width: 170px;
+}
+
+.social .container .boxes {
+  display: flex;
+}
+
+.social p {
+  text-align: center;
+}
+
+.box {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.box {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background-color: #000000;
+  height: 100px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer .container {
+  justify-content: center;
+  text-align: center;
+  margin-left: 550px;
+}
+
+.footer .container .version {
+  font-size: 12px;
+}
+

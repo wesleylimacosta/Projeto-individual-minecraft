@@ -1,0 +1,115 @@
+/* LOGIN */
+
+
+.banner {
+  height: fit-content;
+  padding: 90px 0;
+  color: white;
+  background-image: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/f2/Dirt_background_BE1.png/revision/latest?cb=20210820093527');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
+.banner .container .card {
+    margin-left: 200px;
+    background-color: #e5e5e5;
+    height: fit-content;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    color: orange;
+    align-items: center;
+    border-radius: 4px;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .card h2 {
+    font-size: 30px;
+  }
+  
+  .card h4 {
+    font-size: 16px;
+  }
+  
+  .banner #div_erros_login {
+    margin-top: 15px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  /* FORMULARIO */
+  
+  .alerta_erro{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #ffa600 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  .formulario .tipo_campo {
+    font-size: 20px;
+    font-weight: 600 !important;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin-bottom: 10px;
+    border: 2px solid #ffa600;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .btn {
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #ffa600;
+    width: 120px;
+    align-self: center;
+    margin-top: 5px;
+  }
+  
+  .loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
+
+
+  
