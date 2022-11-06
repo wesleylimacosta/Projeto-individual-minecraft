@@ -16,7 +16,7 @@ header {
   display: flex;
   border-bottom: 3px solid #000000;
   font-family:'Minecraft';
-  background-color: rgb(16, 112, 16);
+  background-color: rgb(77, 71, 71);
 }
 
 .dash {
@@ -46,7 +46,6 @@ header {
  .esquerda{
   margin-top: 20px;
   margin-left: 12%;
-  font-weight: 800;
 
   display: flex;
   justify-content: space-between;

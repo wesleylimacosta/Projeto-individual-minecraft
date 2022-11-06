@@ -8,30 +8,45 @@
   background-image: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/f2/Dirt_background_BE1.png/revision/latest?cb=20210820093527');
   background-size: 100%;
   background-repeat: no-repeat;
+
 }
 
+.banner .container .image{
+  background-repeat: no-repeat;
+  background-image: url('file:///C:/Users/wesle/Downloads/1871572-header_price.jpg');
+  height: 9.6em;
+  position: relative;
+  left: -5.5em;
+  top: -3.8em;
+  width: 25em ;
 
+  
+}
 .banner .container .card {
-    margin-left: 200px;
-    background-color: #e5e5e5;
-    height: fit-content;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    color: orange;
-    align-items: center;
-    border-radius: 4px;
+  margin-left: 635px;
+  top: -13em;
+  position: relative;
+  background-color: #FFF;
+  height: fit-content;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  color: #313131;
+  align-items: center;
+  border-radius: 4px;
   }
   
+
   .card {
     display: flex;
     justify-content: space-around;
   }
   
   .card h2 {
-    font-size: 30px;
+    
+    font-size: 50px;
   }
-  
+
   .card h4 {
     font-size: 16px;
   }
@@ -69,8 +84,11 @@
   }
   
   .formulario .tipo_campo {
+    margin-top: 10px;
+    text-align: center;
     font-size: 20px;
     font-weight: 600 !important;
+
   }
   
   .formulario {
@@ -79,11 +97,12 @@
   }
   
   input {
-    margin-bottom: 10px;
-    border: 2px solid #ffa600;
-    padding: 10px;
+    margin-top: 15px;
+    border: 2px solid #313131;
+    padding: 12px;
     text-align: center;
     border-radius: 10px;
+    width: 200px;
   }
   
   .btn {
@@ -94,7 +113,7 @@
     font-size: 18px;
     padding: 10px 15px;
     color: white;
-    background-color: #ffa600;
+    background-color: #3B8526;
     width: 120px;
     align-self: center;
     margin-top: 5px;
