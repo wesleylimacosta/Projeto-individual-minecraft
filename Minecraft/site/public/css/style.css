@@ -94,9 +94,7 @@ header {
   font-family: 'Minecraft';
 }
 
-.tamanho-conteudo { 
-  height: fit-content !important;
-}
+
 
 .banner .container span {
   font-weight: 800;
