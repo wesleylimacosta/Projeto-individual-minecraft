@@ -80,7 +80,7 @@ header {
   height: fit-content;
   padding: 50px 0;
   color: white;
-  background-image: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/f2/Dirt_background_BE1.png/revision/latest?cb=20210820093527');
+  background-image: url('../assets/imgs/dirt-background.jpeg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
