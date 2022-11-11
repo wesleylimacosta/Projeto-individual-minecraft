@@ -13,7 +13,6 @@
 
 
     <link rel="icon" href="./assets/icon/minecraft-icone-icon.ico">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
@@ -55,18 +54,17 @@
     <!--header fim-->
 
 
-    <div class="banner ">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
+    <div class="banner">
+        <div class="container-tamanho-conteudo">
+            <div class="image"></div>
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
             </div>
-        </div>
-        <div class="container tamanho-conteudo">
-             <div class="image"></div>
             <div class="card medio">
                 <h2>Bem-vindo!</h2>
                 <div class="formulario">
-
                     <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
@@ -74,9 +72,6 @@
                      <!-- Nome -->
                     <span class="tipo_campo">Nome:</span>
                     <input id="nome_input" type="text" placeholder="Seu nome">
-                     <!-- Nickname -->
-                    <span class="tipo_campo">Nickname:</span>
-                    <input id="nick_input" type="text" placeholder="Seu nickname no servidor">
                      <!-- Email -->
                     <span class="tipo_campo">E-mail:</span>
                     <input id="email_input" type="text" placeholder="meuemail@provedor.com">
@@ -89,13 +84,13 @@
                      <!-- Button cadastrar() -->
                     <button class="btn" onclick="cadastrar()">Cadastrar</button>
 
-                </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login">
-
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div>
+    
+                    <div id="div_erros_login">
+    
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,12 +121,11 @@
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
-        var nickVar = nick_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || nickVar == '') {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Preencha todos os campos e tente novamente!)";
 
@@ -154,7 +148,7 @@
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
-                nickServer: nickVar
+                senhaconfirmaServer: confirmacaoSenhaVar,
             })
         }).then(function (resposta) {
 

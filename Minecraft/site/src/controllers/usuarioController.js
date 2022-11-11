@@ -38,7 +38,7 @@ function entrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-        
+
         usuarioModel.entrar(email, senha)
             .then(
                 function (resultado) {
@@ -49,7 +49,7 @@ function entrar(req, res) {
                         console.log(resultado);
                         res.json(resultado[0]);
                     } else if (resultado.length == 0) {
-                        res.status(403).send("Email e/ou senha inválido(s)");
+                        res.status(403).send("Email e/ou senha errado(s)");
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
                     }
@@ -69,23 +69,21 @@ function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     // A variavel a ser criada tem que fazer parte da tabela do banco de dados, ja que aqui é um dos passos para configurar o sistema de cadastro
     var nome = req.body.nomeServer;
-    var nick = req.body.nickServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var ConfirmarSenha = req.body.senhaconfirmaServer;
 
     // Faça as validações dos valores
-    if (nome == undefined) {
+    if (nome == '') {
         res.status(400).send("Seu nome está undefined!");
-    } else if (nick == undefined) {
-        res.status(400).send("Seu nickname está undefined!");
-    } else if (email == undefined) {
+    } else if (email == '') {
         res.status(400).send("Seu email está undefined!");
-    } else if (senha == undefined) {
-        res.status(400).send("Sua senha está undefined!");
+    } else if (senha == '' || senha != ConfirmarSenha) {
+        res.status(400).send("Sua senha está undefined ou não foi confirmada corretamente!");
     } else {
-        
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome,nick, email, senha)
+        usuarioModel.cadastrar(nome,email, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

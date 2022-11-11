@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('http://fonts.cdnfonts.com/css/minecraft-4');
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +25,7 @@ header {
 }
 
 .dash {
-  width: 100%;
+  width: 99.8%;
   padding: 2px;
   display: flex;
   justify-content: space-between;
@@ -77,8 +82,7 @@ header {
 /* BANNER */
 
 .banner {
-  height: fit-content;
-  padding: 50px 0;
+  padding: 100px 0;
   color: white;
   background-image: url('../assets/imgs/dirt-background.jpeg');
   background-size: 100%;
@@ -87,57 +91,56 @@ header {
 
 .banner .container {
   font-size: 50px;
-  height: 200px;
   text-align: justify;
   margin-left:200px;
   margin-top: 100px;
   font-family: 'Minecraft';
 }
 
-
-
-.banner .container span {
-  font-weight: 800;
+.banner-video{
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/235/315/793/minecraft-beautiful-desktop-wallpaper-preview.jpg');
+  position: relative;
+  bottom: 5em;
+  padding: 1em;
+  height: 25em;
+  border-radius: 4px;
 }
 
-/* missao visao valores */
-
-.social {
-  background-color: #e5e5e5;
-  display: flex;
-}
-
-.social .container{
-  justify-content: center;
-}
-
-.box img {
-  width: 170px;
-}
-
-.social .container .boxes {
-  display: flex;
-}
-
-.social p {
-  text-align: center;
-}
-
-.box {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
+.texto-video {
+  color:#000000;
+  right: 9em;
   align-items: center;
+  font-weight: 200;
+  position: relative;
+  text-align:center;
+  font-family:'MINECRAFT';
+  font-size:30px;
 }
 
-
-.box {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.info-video{
+  width: 5em;
+  height: 5em;
+  position: relative;
+  left: 22em;
+  bottom: 4em;
 }
 
+.video-video{
+  padding: 0.2em;
+  position: relative;
+  left: 35em;
+  bottom: 14em;
+  background-color: blue;
+  border-radius: 12px;
+}
+
+.canal-info{
+  top: 3em;
+  position: relative;
+  left: 13.5em;
+  color:#000000;
+  width: 1em;
+}
 
 /* FOOTER */
 
