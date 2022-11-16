@@ -95,10 +95,10 @@ header {
   background-image: url('../assets/imgs/background-image-minecraft-login.jpeg');
   position: relative;
   height: 30em;
-  width: 50em ;
+  width: 45em ;
   border-radius: 12px;
   top: 3em;
-  left: 2em;
+  left: 3em;
 
   
 }
@@ -113,7 +113,7 @@ header {
   color: #313131;
   align-items: center;
   border-radius: 12px;
-  left: 50em;
+  left: 40em;
   }
   
 

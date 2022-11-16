@@ -92,13 +92,13 @@ header {
 
 .image{
   background-repeat: no-repeat;
-  background-image: url('https://conteudo.imguol.com.br/c/entretenimento/b4/2021/11/05/minecraft-1636133996559_v2_900x506.jpg');
+  background-image: url('https://s2.glbimg.com/ltgxMkH6ae6sVjOQSRaXFA5V8Cs=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/A/d/37wEcBRj6xk3muzdALTA/minecraft.jpeg');
   position: relative;
   height: 30em;
-  width: 50em ;
+  width: 45em ;
   border-radius: 12px;
   top: 3em;
-  left: 30em;
+  left: 23em;
 
   
 }
