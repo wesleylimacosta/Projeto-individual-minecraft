@@ -25,7 +25,7 @@ header {
 }
 
 .dash {
-  width: 99.8%;
+  width: 98.8%;
   padding: 0.5em;
   display: flex;
   justify-content: space-between;
@@ -85,7 +85,7 @@ header {
   margin-top: 5em;
   color: white;
   background-image: url('../assets/imgs/dirt-background.jpeg');
-  background-size: 100%;
+  background-size: 200%;
   background-repeat: no-repeat;
 }
 
@@ -101,13 +101,17 @@ header {
   background-image: url('https://c4.wallpaperflare.com/wallpaper/235/315/793/minecraft-beautiful-desktop-wallpaper-preview.jpg');
   position: relative;
   bottom: 5em;
-  height: 25em;
+  height: 27em;
   border-radius: 4px;
+  border-bottom: 3px solid blue ;
+  border-top: 3px solid blue ;
+
+
 }
 
 .texto-video {
   color:#000000;
-  right: 13em;
+  right: 14em;
   align-items: center;
   font-weight: 200;
   position: relative;
@@ -120,15 +124,15 @@ header {
   width: 5em;
   height: 5em;
   position: relative;
-  left: 12em;
+  left: 13.3em;
   bottom: 4em;
 }
 
 .video-video{
-  padding: 0.2em;
+  padding: 0.1em;
   position: relative;
   left: 28em;
-  bottom: 10em;
+  bottom: 13em;
   background-color: blue;
   border-radius: 12px;
 }
@@ -136,7 +140,7 @@ header {
 .canal-info{
   top: 3em;
   position: relative;
-  left: 7em;
+  left: 8em;
   color:#000000;
   width: 1em;
 }
@@ -152,12 +156,14 @@ header {
   background-color: #000000;
   color:#fff;
   font-size: 2em;
+  top: 0.2em;
   width: 30em;
   height: 12em;
   align-items: center;
   text-align: center;
   border-radius: 12px;
   position: relative;
+  border: 3px solid #fff;
 }
 
 .banner-dica2{
@@ -171,12 +177,17 @@ header {
   align-items: center;
   text-align: center;
   border-radius: 12px;
+  margin-bottom: 0.2em;
+  border: 3px solid #fff;
+
 }
 
 .fundo{
   background-image: url('../assets/imgs/dirt-background.jpeg');
-  background-size: 100%;
+  background-size: 200%;
   background-repeat: no-repeat;
+  border-bottom: 3px solid blue ;
+
 }
 
 /* FOOTER */
@@ -190,6 +201,7 @@ header {
   font-size: 15px;
   display: flex;
   align-items: center;
+  border-top: 3px solid blue ;
 }
 
 .footer .container {
