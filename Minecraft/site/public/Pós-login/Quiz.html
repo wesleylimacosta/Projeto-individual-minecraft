@@ -57,10 +57,51 @@
 
     <div class="banner">
         <div class="container">
-            <div class="quiz">
+            <div class="quiz" id="quiz">
                 <div class="imagem"></div>
                 <button onclick="iniciar()">Iniciar quiz</button>
             </div>
+            <div class="pt1" id="pt1" style="display:none">
+                <div class="imagempt1" style="color:#fff;">
+                    <p>Qual o mob mais forte do minecraft?</p>
+                    <input type="text" id="in_mob"><button onclick="perguntaUM()">Proxima</button><br>
+                    <p>Enderman<br>
+                        EnderDragon<br>
+                        Zombie<br>
+                        Warden</p>
+                </div>
+            </div>
+            <div class="pt2" id="pt2" style="display:none;">
+                <p>Qual picareta tem a melhor qualidade?</p>
+                <input type="text" id="in_picareta">
+                <button onclick="perguntaDOIS()">Proxima</button><br>
+                <p>Picareta de madeira<br>
+                    Picareta de ferro<br>
+                    Picareta de ouro<br>
+                    Picareta de diamante<br>
+                    Picareta de netherite</p>
+            </div>
+            <div class="pt3" id="pt3" style="display:none;">
+                <p>Qual </p>
+                <input type="text" id="">
+                <button onclick="perguntaTRES()">Proxima</button><br>
+                <p>Picareta de madeira<br>
+                    Picareta de ferro<br>
+                    Picareta de ouro<br>
+                    Picareta de diamante<br>
+                    Picareta de netherite</p>
+            </div>
+            <div class="pt4" id="pt4" style="display:none;">
+                <p>Qual </p>
+                <input type="text" id="">
+                <button onclick="perguntaTRES()">Proxima</button><br>
+                <p>Picareta de madeira<br>
+                    Picareta de ferro<br>
+                    Picareta de ouro<br>
+                    Picareta de diamante<br>
+                    Picareta de netherite</p>
+            </div>
+            
         </div>
 
     </div>
@@ -80,5 +121,68 @@
 
 </html>
 <script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    var parte1 = []
+    var parte2 = []
+    var parte3 = []
+    var parte4 = []
+    var parte5 = []
+
+    function iniciar() {
+        quiz.style.display = 'none'
+        pt1.style.display = 'block'
+    }
+
+    function perguntaUM() {
+        var resposta1 = in_mob.value.toLowerCase()
+
+        if (resposta1 == 'enderman') {
+            pt1.style.display = 'none'
+            pt2.style.display = 'block'
+            parte1.push(resposta1)
+        } else if (resposta1 == 'enderdragon') {
+            pt1.style.display = 'none'
+            pt2.style.display = 'block'
+            parte1.push(resposta1)
+        } else if (resposta1 == 'zombie') {
+            pt1.style.display = 'none'
+            pt2.style.display = 'block'
+            parte1.push(resposta1)
+        } else if (resposta1 == 'warden') {
+            pt1.style.display = 'none'
+            pt2.style.display = 'block'
+            parte1.push(resposta1)
+        } else {
+            alert('Você deve escrever somente entre os mobs da lista')
+        }
+    }
+
+    function perguntaDOIS() {
+        var resposta2 = in_picareta.value.toLowerCase()
+
+        if (resposta2 == 'picareta de madeira') {
+            pt2.style.display = 'none'
+            pt3.style.display = 'block'
+            parte2.push(resposta2)
+        } else if (resposta2 == 'picareta de ferro') {
+            pt2.style.display = 'none'
+            pt3.style.display = 'block'
+            parte2.push(resposta2)
+        } else if (resposta2 == 'picareta de ouro') {
+            pt2.style.display = 'none'
+            pt3.style.display = 'block'
+            parte2.push(resposta2)
+        } else if (resposta2 == 'picareta de diamante') {
+            pt2.style.display = 'none'
+            pt3.style.display = 'block'
+            parte2.push(resposta2)
+        } else if (resposta2 == 'picareta de netherite') {
+            pt2.style.display = 'none'
+            pt3.style.display = 'block'
+            parte2.push(resposta2)
+        } else {
+            alert('Você deve escrever somente entre as picaretas da lista')
+        }
+    }
+
+
 </script>
