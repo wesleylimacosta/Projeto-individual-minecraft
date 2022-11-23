@@ -62,10 +62,10 @@
                 <button onclick="iniciar()">Iniciar quiz</button>
             </div>
             <div class="pt1" id="pt1" style="display:none">
-                <div class="imagempt1" style="color:#fff;">
+                <div class="imagempt1">
                     <p>Qual o mob mais forte do minecraft?</p>
-                    <input type="text" id="in_mob"><button onclick="perguntaUM()">Proxima</button><br>
-                    <p>Enderman<br>
+                    <input type="text" id="in_mob" class="in_input"><button onclick="perguntaUM()" class="in_btn">Enviar</button><br>
+                    <p class="in_lista">Enderman<br>
                         EnderDragon<br>
                         Zombie<br>
                         Warden</p>
@@ -73,35 +73,45 @@
             </div>
             <div class="pt2" id="pt2" style="display:none;">
                 <p>Qual picareta tem a melhor qualidade?</p>
-                <input type="text" id="in_picareta">
-                <button onclick="perguntaDOIS()">Proxima</button><br>
-                <p>Picareta de madeira<br>
+                <input type="text" id="in_picareta" class="in_input">
+                <button onclick="perguntaDOIS()" class="in_btn">Enviar</button><br>
+                <p class="in_lista" style="font-size:0.8em;">Picareta de madeira<br>
                     Picareta de ferro<br>
                     Picareta de ouro<br>
                     Picareta de diamante<br>
                     Picareta de netherite</p>
             </div>
             <div class="pt3" id="pt3" style="display:none;">
-                <p>Qual </p>
-                <input type="text" id="">
-                <button onclick="perguntaTRES()">Proxima</button><br>
-                <p>Picareta de madeira<br>
-                    Picareta de ferro<br>
-                    Picareta de ouro<br>
-                    Picareta de diamante<br>
-                    Picareta de netherite</p>
+                <p>Qual a comida mais forte? </p>
+                <input type="text" id="in_fruta" class="in_input">
+                <button onclick="perguntaTRES()" class="in_btn">Enviar</button><br>
+                <p class="in_lista">Cenoura dourada<br>
+                    Fruta do coro<br>
+                    Maça dourada encantada<br>
+                    Cenoura<br>
+                    Melancia</p>
             </div>
             <div class="pt4" id="pt4" style="display:none;">
-                <p>Qual </p>
-                <input type="text" id="">
-                <button onclick="perguntaTRES()">Proxima</button><br>
-                <p>Picareta de madeira<br>
-                    Picareta de ferro<br>
-                    Picareta de ouro<br>
-                    Picareta de diamante<br>
-                    Picareta de netherite</p>
+                <p> Qual a espada mais forte?</p>
+                <input type="text" id="in_espada">
+                <button onclick="perguntaQUATRO()">Enviar</button><br>
+                <p>Espada de madeira<br>
+                    Espada de ferro<br>
+                    Espada de ouro<br>
+                    Espada de diamante<br>
+                    Espada de netherite</p>
             </div>
-            
+            <div class="pt5" id="pt5" style="display:none;">
+                <p> Qual destes youtubers, tem um melhor conhecimento em sistemas de redstone?</p>
+                <input type="text" id="in_youtuber">
+                <button onclick="perguntaCINCO()">Enviar</button><br>
+                <p>Vinicius13<br>
+                    RezendeEvil<br>
+                    AuthentichGames<br> 
+                    TazerCraft(Pac e Mike)<br>
+                    Am3nic</p>
+            </div>
+
         </div>
 
     </div>
@@ -121,11 +131,7 @@
 
 </html>
 <script>
-    var parte1 = []
-    var parte2 = []
-    var parte3 = []
-    var parte4 = []
-    var parte5 = []
+    var resultados = []
 
     function iniciar() {
         quiz.style.display = 'none'
@@ -138,20 +144,34 @@
         if (resposta1 == 'enderman') {
             pt1.style.display = 'none'
             pt2.style.display = 'block'
-            parte1.push(resposta1)
+            var parte1 = {
+                resultado: resposta1,
+            }
+            resultados.push(parte1)
         } else if (resposta1 == 'enderdragon') {
             pt1.style.display = 'none'
             pt2.style.display = 'block'
-            parte1.push(resposta1)
+            var parte1 = {
+                resultado: resposta1,
+            }
+            resultados.push(parte1)
         } else if (resposta1 == 'zombie') {
             pt1.style.display = 'none'
             pt2.style.display = 'block'
-            parte1.push(resposta1)
+            var parte1 = {
+                resultado: resposta1,
+            }
+            resultados.push(parte1)
         } else if (resposta1 == 'warden') {
             pt1.style.display = 'none'
             pt2.style.display = 'block'
-            parte1.push(resposta1)
-        } else {
+            var parte1 = {
+                resultado: resposta1,
+            }
+            resultados.push(parte1)
+        } else if (resposta1 == '') {
+            alert('Preencha o campo e tente novamente')
+        }else {
             alert('Você deve escrever somente entre os mobs da lista')
         }
     }
@@ -162,27 +182,178 @@
         if (resposta2 == 'picareta de madeira') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            parte2.push(resposta2)
+            var parte2 = {
+                resultado: resposta2,
+            }
+            resultados.push(parte2)
         } else if (resposta2 == 'picareta de ferro') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            parte2.push(resposta2)
+            var parte2 = {
+                resultado: resposta2,
+            }
+            resultados.push(parte2)
         } else if (resposta2 == 'picareta de ouro') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            parte2.push(resposta2)
+            var parte2 = {
+                resultado: resposta2,
+            }
+            resultados.push(parte2)
         } else if (resposta2 == 'picareta de diamante') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            parte2.push(resposta2)
+            var parte2 = {
+                resultado: resposta2,
+            }
+            resultados.push(parte2)
         } else if (resposta2 == 'picareta de netherite') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            parte2.push(resposta2)
+            var parte2 = {
+                resultado: resposta2,
+            }
+            resultados.push(parte2)
+        }else if (resposta2 == '') {
+            alert('Preencha o campo e tente novamente')
         } else {
             alert('Você deve escrever somente entre as picaretas da lista')
         }
     }
+    function perguntaTRES() {
+        var resposta3 = in_fruta.value.toLowerCase()
 
+        if (resposta3 == 'maçã dourada encantada' || resposta3 == 'maça dourada encatada') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'fruta do coro') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'cenoura') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'cenoura dourada') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'melãncia') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == '') {
+            alert('Preencha o campo e tente novamente')
+        }
+        else {
+            alert('Você deve escrever somente entre as comidas da lista')
+        }
+    }
+    function perguntaTRES() {
+        var resposta3 = in_fruta.value.toLowerCase()
+
+        if (resposta3 == 'maçã dourada encantada') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'fruta do coro') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'cenoura') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'cenoura dourada') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'melãncia') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == '') {
+            alert('Preencha o campo e tente novamente')
+        }
+        else {
+            alert('Você deve escrever somente entre as comidas da lista')
+        }
+    }
+    function perguntaTRES() {
+        var resposta3 = in_fruta.value.toLowerCase()
+
+        if (resposta3 == 'maçã dourada encantada') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'fruta do coro') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'cenoura') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'cenoura dourada') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == 'melãncia') {
+            pt3.style.display = 'none'
+            pt4.style.display = 'block'
+            var parte2 = {
+                resultado: resposta3,
+            }
+            resultados.push(parte2)
+        } else if (resposta3 == '') {
+            alert('Preencha o campo e tente novamente')
+        }
+        else {
+            alert('Você deve escrever somente entre as comidas da lista')
+        }
+    }
 
 </script>
