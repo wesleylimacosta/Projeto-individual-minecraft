@@ -122,12 +122,6 @@ header {
   font-size: 1em;
 }
 
-.in_lista{
-  position: relative;
-  left: 4em;
-  bottom: 2em;
-}
-
 .pt2{
   width: 15.5em;
   height: 8em;
@@ -148,7 +142,7 @@ header {
 .pt3{
   width: 15.5em;
   height: 8em;
-  background-image: url('https://images.free3d.com/imgd/l7/5b35124126be8b2b788b4567/5487-minecraft-pickaxe.png');
+  background-image: url('https://xforgeassets002.xboxlive.com/pf-title-b63a0803d3653643-20ca2/254e36a7-4f41-4063-9386-23b3f9576d06/RestaurantSim_screenshot_3.jpg');
   background-repeat: no-repeat;
   position: relative; 
   bottom: 5em;
@@ -158,8 +152,77 @@ header {
 .pt3 p{
   color: #fff;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.8em;
   right: 1em;
+}
+
+.pt4{
+  width: 15.5em;
+  height: 8em;
+  background-image: url('https://cutewallpaper.org/24/steve-minecraft-png/minecraft-steve-sword-free-image-on-pixabay.png');
+  background-repeat: no-repeat;
+  position: relative; 
+  bottom: 5em;
+  left: 2em;
+  border-radius: 12px;
+}
+.pt4 p{
+  color: #fff;
+  text-align: center;
+  font-size: 0.8em;
+  position:relative;
+}
+
+
+.pt5{
+  width: 15.5em;
+  height: 8em;
+  background-image: url('https://www.esports.net/br/wp-content/uploads/sites/3/2022/10/servidores-minecraft-2022.jpg');
+  background-repeat: no-repeat;
+  position: relative; 
+  bottom: 5em;
+  left: 2em;
+  border-radius: 12px;
+}
+.pt5 p{
+  color: #fff;
+  text-align: center;
+  font-size: 0.8em;
+  position:relative;
+}
+
+.fim{
+  width: 15em;
+  height: 8em;
+  background-image: url('https://i2.moyens.net/pt/images/2021/08/1627906633_587_As-5-melhores-coisas-sobre-o-fim-do-Minecraft.jpg');
+  background-repeat: no-repeat;
+  position: relative; 
+  bottom: 5em;
+  left: 2em;
+  border-radius: 12px;
+}
+
+.fim p,span {
+  font-size: 0.5em;
+  font-family: sans-serif;
+  color: #fff;
+  position: relative;
+  top: 5em;
+}
+.fim h3{
+  font-size: 0.5em;
+  font-family: sans-serif;
+  color: #fff;
+  position: relative;
+  left: 6em;
+}
+.fim button{
+  position: relative;
+  left:2em;
+  top: 15em;
+  border-radius: 12px;
+  height: 4em;
+  cursor: pointer;
 }
 
 .in_input{

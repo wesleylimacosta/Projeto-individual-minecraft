@@ -44,7 +44,7 @@
                 </li>
                 <li style="left:0.5em;position: relative;">|</li>
                 <li>
-                    <h3 style="font-family:sans-serif">Ola: <span id=" b_usuario" style="font-family:sans-serif">
+                    <h3 style="font-family:sans-serif">Ola: <span id="b_usuario" style="font-family:sans-serif">
                             Usuario</span><img
                             src="https://i.pinimg.com/236x/bc/be/81/bcbe81a9731c37d270fc7e374ad885c3.jpg"
                             style="height:20px;position:relative;left:0.5em;top:0.2em"></h3>
@@ -64,7 +64,8 @@
             <div class="pt1" id="pt1" style="display:none">
                 <div class="imagempt1">
                     <p>Qual o mob mais forte do minecraft?</p>
-                    <input type="text" id="in_mob" class="in_input"><button onclick="perguntaUM()" class="in_btn">Enviar</button><br>
+                    <input type="text" id="in_mob" class="in_input"><button onclick="perguntaUM()"
+                        class="in_btn">Enviar</button><br>
                     <p class="in_lista">Enderman<br>
                         EnderDragon<br>
                         Zombie<br>
@@ -87,15 +88,15 @@
                 <button onclick="perguntaTRES()" class="in_btn">Enviar</button><br>
                 <p class="in_lista">Cenoura dourada<br>
                     Fruta do coro<br>
-                    Maça dourada encantada<br>
+                    Maca encantada<br>
                     Cenoura<br>
                     Melancia</p>
             </div>
             <div class="pt4" id="pt4" style="display:none;">
                 <p> Qual a espada mais forte?</p>
-                <input type="text" id="in_espada">
-                <button onclick="perguntaQUATRO()">Enviar</button><br>
-                <p>Espada de madeira<br>
+                <input type="text" id="in_espada" class="in_input">
+                <button onclick="perguntaQUATRO()" class="in_btn">Enviar</button><br>
+                <p class="in_lista">Espada de madeira<br>
                     Espada de ferro<br>
                     Espada de ouro<br>
                     Espada de diamante<br>
@@ -103,13 +104,20 @@
             </div>
             <div class="pt5" id="pt5" style="display:none;">
                 <p> Qual destes youtubers, tem um melhor conhecimento em sistemas de redstone?</p>
-                <input type="text" id="in_youtuber">
-                <button onclick="perguntaCINCO()">Enviar</button><br>
-                <p>Vinicius13<br>
+                <input type="text" id="in_youtuber" class="in_input">
+                <button onclick="perguntaCINCO()" class="in_btn">Enviar</button><br>
+                <p class="in_lista">Vinicius13<br>
                     RezendeEvil<br>
-                    AuthentichGames<br> 
-                    TazerCraft(Pac e Mike)<br>
-                    Am3nic</p>
+                    AuthentichGames<br>
+                    TazerCraft<br>
+                    Am3nic<br>
+                </p>
+            </div>
+            <div class="fim" id="fim" style="display: none;">
+                <h3>Parabens você chegou ao fim do quiz!</h3>
+                <span>Você conquistou: <span id="b_pontos">0</span>pontos</span><br>
+                <span>Media dos usuarios: <span id="b_media">0</span>%</span>
+                <button onclick="atualizar()">Tentar novamente</button>
             </div>
 
         </div>
@@ -131,6 +139,9 @@
 
 </html>
 <script>
+    b_usuario.innerHTML = sessionStorage.ID_USUARIO
+    b_pontos.innerHTML = sessionStorage.FK_QUIZ
+    b_media.innerHTML = sessionStorage.FK_QUIZ
     var resultados = []
 
     function iniciar() {
@@ -171,7 +182,7 @@
             resultados.push(parte1)
         } else if (resposta1 == '') {
             alert('Preencha o campo e tente novamente')
-        }else {
+        } else {
             alert('Você deve escrever somente entre os mobs da lista')
         }
     }
@@ -214,7 +225,7 @@
                 resultado: resposta2,
             }
             resultados.push(parte2)
-        }else if (resposta2 == '') {
+        } else if (resposta2 == '') {
             alert('Preencha o campo e tente novamente')
         } else {
             alert('Você deve escrever somente entre as picaretas da lista')
@@ -223,41 +234,41 @@
     function perguntaTRES() {
         var resposta3 = in_fruta.value.toLowerCase()
 
-        if (resposta3 == 'maçã dourada encantada' || resposta3 == 'maça dourada encatada') {
+       if (resposta3 == 'maca encantada') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte2 = {
+            var parte3 = {
                 resultado: resposta3,
             }
-            resultados.push(parte2)
+            resultados.push(parte3)
         } else if (resposta3 == 'fruta do coro') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte2 = {
+            var parte3 = {
                 resultado: resposta3,
             }
-            resultados.push(parte2)
+            resultados.push(parte3)
         } else if (resposta3 == 'cenoura') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte2 = {
+            var parte3 = {
                 resultado: resposta3,
             }
-            resultados.push(parte2)
+            resultados.push(parte3)
         } else if (resposta3 == 'cenoura dourada') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte2 = {
+            var parte3 = {
                 resultado: resposta3,
             }
-            resultados.push(parte2)
+            resultados.push(parte3)
         } else if (resposta3 == 'melãncia') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte2 = {
+            var parte3 = {
                 resultado: resposta3,
             }
-            resultados.push(parte2)
+            resultados.push(parte3)
         } else if (resposta3 == '') {
             alert('Preencha o campo e tente novamente')
         }
@@ -265,94 +276,94 @@
             alert('Você deve escrever somente entre as comidas da lista')
         }
     }
-    function perguntaTRES() {
-        var resposta3 = in_fruta.value.toLowerCase()
+    function perguntaQUATRO() {
+        var resposta4 = in_espada.value.toLowerCase()
 
-        if (resposta3 == 'maçã dourada encantada') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+       if (resposta4 == 'espada de madeira') {
+            pt4.style.display = 'none'
+            pt5.style.display = 'block'
+            var parte4 = {
+                resultado: resposta4,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == 'fruta do coro') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+            resultados.push(parte4)
+        } else if (resposta4 == 'espada de ferro') {
+            pt4.style.display = 'none'
+            pt5.style.display = 'block'
+            var parte4 = {
+                resultado: resposta4,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == 'cenoura') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+            resultados.push(parte4)
+        } else if (resposta4 == 'espada de ouro') {
+            pt4.style.display = 'none'
+            pt5.style.display = 'block'
+            var parte4 = {
+                resultado: resposta4,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == 'cenoura dourada') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+            resultados.push(parte4)
+        } else if (resposta4 == 'espada de diamante') {
+            pt4.style.display = 'none'
+            pt5.style.display = 'block'
+            var parte4 = {
+                resultado: resposta4,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == 'melãncia') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+            resultados.push(parte4)
+        } else if (resposta4 == 'espada de netherite') {
+            pt4.style.display = 'none'
+            pt5.style.display = 'block'
+            var parte4 = {
+                resultado: resposta4,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == '') {
+            resultados.push(parte4)
+        } else if (resposta4 == '') {
             alert('Preencha o campo e tente novamente')
         }
         else {
             alert('Você deve escrever somente entre as comidas da lista')
         }
     }
-    function perguntaTRES() {
-        var resposta3 = in_fruta.value.toLowerCase()
+    function perguntaCINCO() {
+        var resposta5 = in_youtuber.value.toLowerCase()
 
-        if (resposta3 == 'maçã dourada encantada') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+       if (resposta5 == 'vinicius13') {
+            pt5.style.display = 'none'
+            fim.style.display = 'block'
+            var parte5 = {
+                resultado: resposta5,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == 'fruta do coro') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+            resultados.push(parte5)
+        } else if (resposta5 == 'rezendeevil') {
+            pt5.style.display = 'none'
+            fim.style.display = 'block'
+            var parte5 = {
+                resultado: resposta5,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == 'cenoura') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+            resultados.push(parte5)
+        } else if (resposta5 == 'authenticgames') {
+            pt5.style.display = 'none'
+            fim.style.display = 'block'
+            var parte5 = {
+                resultado: resposta5,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == 'cenoura dourada') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+            resultados.push(parte5)
+        } else if (resposta5 == 'tazercraft') {
+            pt5.style.display = 'none'
+            fim.style.display = 'block'
+            var parte5 = {
+                resultado: resposta5,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == 'melãncia') {
-            pt3.style.display = 'none'
-            pt4.style.display = 'block'
-            var parte2 = {
-                resultado: resposta3,
+            resultados.push(parte5)
+        } else if (resposta5 == 'am3nic') {
+            pt5.style.display = 'none'
+            fim.style.display = 'block'
+            var parte5 = {
+                resultado: resposta5,
             }
-            resultados.push(parte2)
-        } else if (resposta3 == '') {
+            resultados.push(parte5)
+        } else if (resposta5 == '') {
             alert('Preencha o campo e tente novamente')
         }
         else {
-            alert('Você deve escrever somente entre as comidas da lista')
+            alert('Você deve escrever somente entre os youtubers da lista')
         }
     }
 
