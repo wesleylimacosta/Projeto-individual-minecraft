@@ -236,7 +236,7 @@
     function perguntaTRES() {
         var resposta3 = in_fruta.value.toLowerCase()
 
-       if (resposta3 == 'maca encantada') {
+        if (resposta3 == 'maca encantada') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
             var parte3 = {
@@ -282,7 +282,7 @@
     function perguntaQUATRO() {
         var resposta4 = in_espada.value.toLowerCase()
 
-       if (resposta4 == 'espada de madeira') {
+        if (resposta4 == 'espada de madeira') {
             pt4.style.display = 'none'
             pt5.style.display = 'block'
             var parte4 = {
@@ -328,7 +328,7 @@
     function perguntaCINCO() {
         var resposta5 = in_youtuber.value.toLowerCase()
 
-       if (resposta5 == 'vinicius13') {
+        if (resposta5 == 'vinicius13') {
             pt5.style.display = 'none'
             fim.style.display = 'block'
             var parte5 = {
@@ -336,8 +336,7 @@
             }
             resultados.push(parte5)
             pontos++
-    b_pontos.innerHTML = pontos
-
+            
         } else if (resposta5 == 'rezendeevil') {
             pt5.style.display = 'none'
             fim.style.display = 'block'
@@ -372,6 +371,7 @@
         else {
             alert('Você deve escrever somente entre os youtubers da lista')
         }
+        b_pontos.innerHTML = pontos
     }
-
+    
 </script>

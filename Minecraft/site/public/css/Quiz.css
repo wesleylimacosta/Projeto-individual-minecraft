@@ -120,6 +120,7 @@ header {
   color: #fff;
   text-align: center;
   font-size: 1em;
+  text-shadow: 10px 10px 10px #000;
 }
 
 .pt2{
@@ -137,6 +138,8 @@ header {
   text-align: center;
   font-size: 1em;
   right: 1em;
+  text-shadow: 10px 10px 10px #000;
+
 }
 
 .pt3{
@@ -154,6 +157,7 @@ header {
   text-align: center;
   font-size: 0.8em;
   right: 1em;
+  text-shadow: 10px 10px 10px #000;
 }
 
 .pt4{
@@ -171,6 +175,7 @@ header {
   text-align: center;
   font-size: 0.8em;
   position:relative;
+  text-shadow: 10px 10px 10px #000;
 }
 
 
@@ -189,6 +194,7 @@ header {
   text-align: center;
   font-size: 0.8em;
   position:relative;
+  text-shadow: 10px 10px 10px #000;
 }
 
 .fim{
