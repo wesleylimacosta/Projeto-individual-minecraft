@@ -140,9 +140,9 @@
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.ID_USUARIO
-    b_pontos.innerHTML = sessionStorage.FK_QUIZ
     b_media.innerHTML = sessionStorage.FK_QUIZ
     var resultados = []
+    var pontos = 0
 
     function iniciar() {
         quiz.style.display = 'none'
@@ -179,6 +179,7 @@
             var parte1 = {
                 resultado: resposta1,
             }
+            pontos++
             resultados.push(parte1)
         } else if (resposta1 == '') {
             alert('Preencha o campo e tente novamente')
@@ -225,6 +226,7 @@
                 resultado: resposta2,
             }
             resultados.push(parte2)
+            pontos++
         } else if (resposta2 == '') {
             alert('Preencha o campo e tente novamente')
         } else {
@@ -241,6 +243,7 @@
                 resultado: resposta3,
             }
             resultados.push(parte3)
+            pontos++
         } else if (resposta3 == 'fruta do coro') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
@@ -314,6 +317,7 @@
                 resultado: resposta4,
             }
             resultados.push(parte4)
+            pontos++
         } else if (resposta4 == '') {
             alert('Preencha o campo e tente novamente')
         }
@@ -331,6 +335,9 @@
                 resultado: resposta5,
             }
             resultados.push(parte5)
+            pontos++
+    b_pontos.innerHTML = pontos
+
         } else if (resposta5 == 'rezendeevil') {
             pt5.style.display = 'none'
             fim.style.display = 'block'
