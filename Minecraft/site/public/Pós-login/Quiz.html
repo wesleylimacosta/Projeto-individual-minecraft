@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
     <header class="dash">
         <ul class="esquerda">
             <li style="margin: 0 5px;">
@@ -25,7 +24,7 @@
             </li>
             <li>|</li>
             <li style="margin: 0 35px;">
-                <a href="">Adquira</a>
+                <a href="https://www.minecraft.net/pt-pt/store/minecraft-java-bedrock-edition-pc" target="_blank">Adquira</a>
             </li>
             <li>|</li>
             <li style="margin: 0 40px;">
@@ -117,7 +116,7 @@
                 <h3>Parabens você chegou ao fim do quiz!</h3>
                 <span>Você conquistou: <span id="b_pontos">0</span>pontos</span><br>
                 <span>Media dos usuarios: <span id="b_media">0</span>%</span>
-                <button onclick="atualizar()">Tentar novamente</button>
+                <button onclick="RespostasQUIZ()">Tentar novamente</button>
             </div>
 
         </div>
@@ -139,10 +138,15 @@
 
 </html>
 <script>
+    window.onload = media()
     b_usuario.innerHTML = sessionStorage.ID_USUARIO
-    b_media.innerHTML = sessionStorage.FK_QUIZ
-    var resultados = []
+    var parte1Var = ''
+    var parte2Var = ''
+    var parte3Var = ''
+    var parte4Var = ''
+    var parte5Var = ''
     var pontos = 0
+    var ID_USUARIOVar = sessionStorage.ID_USUARIO
 
     function iniciar() {
         quiz.style.display = 'none'
@@ -155,32 +159,21 @@
         if (resposta1 == 'enderman') {
             pt1.style.display = 'none'
             pt2.style.display = 'block'
-            var parte1 = {
-                resultado: resposta1,
-            }
-            resultados.push(parte1)
+            parte1Var = 'enderman'
         } else if (resposta1 == 'enderdragon') {
             pt1.style.display = 'none'
             pt2.style.display = 'block'
-            var parte1 = {
-                resultado: resposta1,
-            }
-            resultados.push(parte1)
+            parte1Var = 'enderdragon'
+
         } else if (resposta1 == 'zombie') {
             pt1.style.display = 'none'
             pt2.style.display = 'block'
-            var parte1 = {
-                resultado: resposta1,
-            }
-            resultados.push(parte1)
+            parte1Var = 'zombie'
         } else if (resposta1 == 'warden') {
             pt1.style.display = 'none'
             pt2.style.display = 'block'
-            var parte1 = {
-                resultado: resposta1,
-            }
+            parte1Var = 'warden'
             pontos++
-            resultados.push(parte1)
         } else if (resposta1 == '') {
             alert('Preencha o campo e tente novamente')
         } else {
@@ -194,38 +187,23 @@
         if (resposta2 == 'picareta de madeira') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            var parte2 = {
-                resultado: resposta2,
-            }
-            resultados.push(parte2)
+            parte2Var = 'picareta de madeira'
         } else if (resposta2 == 'picareta de ferro') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            var parte2 = {
-                resultado: resposta2,
-            }
-            resultados.push(parte2)
+            parte2Var = 'picareta de ferro'
         } else if (resposta2 == 'picareta de ouro') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            var parte2 = {
-                resultado: resposta2,
-            }
-            resultados.push(parte2)
+            parte2Var = 'picareta de ouro'
         } else if (resposta2 == 'picareta de diamante') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            var parte2 = {
-                resultado: resposta2,
-            }
-            resultados.push(parte2)
+            parte2Var = 'picareta de diamante'
         } else if (resposta2 == 'picareta de netherite') {
             pt2.style.display = 'none'
             pt3.style.display = 'block'
-            var parte2 = {
-                resultado: resposta2,
-            }
-            resultados.push(parte2)
+            parte2Var = 'picareta de netherite'
             pontos++
         } else if (resposta2 == '') {
             alert('Preencha o campo e tente novamente')
@@ -239,39 +217,24 @@
         if (resposta3 == 'maca encantada') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte3 = {
-                resultado: resposta3,
-            }
-            resultados.push(parte3)
+            parte3Var = 'maca encantada'
             pontos++
         } else if (resposta3 == 'fruta do coro') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte3 = {
-                resultado: resposta3,
-            }
-            resultados.push(parte3)
+            parte3Var = 'fruta do coro'
         } else if (resposta3 == 'cenoura') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte3 = {
-                resultado: resposta3,
-            }
-            resultados.push(parte3)
+            parte3Var = 'cenoura'
         } else if (resposta3 == 'cenoura dourada') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte3 = {
-                resultado: resposta3,
-            }
-            resultados.push(parte3)
+            parte3Var = 'cenoura dourada'
         } else if (resposta3 == 'melãncia') {
             pt3.style.display = 'none'
             pt4.style.display = 'block'
-            var parte3 = {
-                resultado: resposta3,
-            }
-            resultados.push(parte3)
+            parte3Var = 'melãncia'
         } else if (resposta3 == '') {
             alert('Preencha o campo e tente novamente')
         }
@@ -285,38 +248,23 @@
         if (resposta4 == 'espada de madeira') {
             pt4.style.display = 'none'
             pt5.style.display = 'block'
-            var parte4 = {
-                resultado: resposta4,
-            }
-            resultados.push(parte4)
+            parte4Var = 'espada de madeira'
         } else if (resposta4 == 'espada de ferro') {
             pt4.style.display = 'none'
             pt5.style.display = 'block'
-            var parte4 = {
-                resultado: resposta4,
-            }
-            resultados.push(parte4)
+            parte4Var = 'espada de ferro'
         } else if (resposta4 == 'espada de ouro') {
             pt4.style.display = 'none'
             pt5.style.display = 'block'
-            var parte4 = {
-                resultado: resposta4,
-            }
-            resultados.push(parte4)
+            parte4Var = 'espada de ouro'
         } else if (resposta4 == 'espada de diamante') {
             pt4.style.display = 'none'
             pt5.style.display = 'block'
-            var parte4 = {
-                resultado: resposta4,
-            }
-            resultados.push(parte4)
+            parte4Var = 'espada de diamante'
         } else if (resposta4 == 'espada de netherite') {
             pt4.style.display = 'none'
             pt5.style.display = 'block'
-            var parte4 = {
-                resultado: resposta4,
-            }
-            resultados.push(parte4)
+            parte4Var = 'espada de netherite'
             pontos++
         } else if (resposta4 == '') {
             alert('Preencha o campo e tente novamente')
@@ -331,40 +279,25 @@
         if (resposta5 == 'vinicius13') {
             pt5.style.display = 'none'
             fim.style.display = 'block'
-            var parte5 = {
-                resultado: resposta5,
-            }
-            resultados.push(parte5)
+            parte5Var = 'vinicius13'
             pontos++
-            
+
         } else if (resposta5 == 'rezendeevil') {
             pt5.style.display = 'none'
             fim.style.display = 'block'
-            var parte5 = {
-                resultado: resposta5,
-            }
-            resultados.push(parte5)
+            parte5Var = 'rezendeevil'
         } else if (resposta5 == 'authenticgames') {
             pt5.style.display = 'none'
             fim.style.display = 'block'
-            var parte5 = {
-                resultado: resposta5,
-            }
-            resultados.push(parte5)
+            parte5Var = 'authenticgames'
         } else if (resposta5 == 'tazercraft') {
             pt5.style.display = 'none'
             fim.style.display = 'block'
-            var parte5 = {
-                resultado: resposta5,
-            }
-            resultados.push(parte5)
+            parte5Var = 'tazercraft'
         } else if (resposta5 == 'am3nic') {
             pt5.style.display = 'none'
             fim.style.display = 'block'
-            var parte5 = {
-                resultado: resposta5,
-            }
-            resultados.push(parte5)
+            parte5Var = 'am3nic'
         } else if (resposta5 == '') {
             alert('Preencha o campo e tente novamente')
         }
@@ -373,5 +306,66 @@
         }
         b_pontos.innerHTML = pontos
     }
-    
+
+    function RespostasQUIZ() {
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/RespostasQUIZ", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                parte1Server: parte1Var,
+                parte2Server: parte2Var,
+                parte3Server: parte3Var,
+                parte4Server: parte4Var,
+                parte5Server: parte5Var,
+                pontosServer: pontos,
+                ID_USUARIOServer: ID_USUARIOVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+
+                alert('Respostas registradas com sucesso!')
+                setTimeout(() => {
+                    window.location = "Quiz.html";
+                }, "2000")
+
+            } else {
+                throw ("Houve um erro ao tentar registrar as respostas!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
+    function media() {
+
+        fetch(`/usuarios/media`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    var json = JSON.stringify(resposta);
+                    console.log(resposta[0].media);
+                    sessionStorage.MEDIA_USUARIOS = resposta[0].media
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+            b_media.innerHTML = sessionStorage.MEDIA_USUARIOS
+    }
+
 </script>

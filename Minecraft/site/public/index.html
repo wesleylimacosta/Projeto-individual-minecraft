@@ -9,6 +9,7 @@
     <title>Mineland | Página Inicial</title>
 
     <script src="./js/funcoes.js"></script>
+    <script src="./js/carrousel.js" defer></script>
 
     <link rel="icon" href="./assets/icon/minecraft-icone-icon.ico">
     <link rel="stylesheet" href="./css/style.css">
@@ -25,7 +26,8 @@
             </li>
             <li>|</li>
             <li style="margin: 0 35px;">
-                <a href="https://www.minecraft.net/pt-pt/store/minecraft-java-bedrock-edition-pc">Adquira</a>
+                <a href="https://www.minecraft.net/pt-pt/store/minecraft-java-bedrock-edition-pc"
+                    target="_blank">Adquira</a>
             </li>
             <li>|</li>
             <li style="margin: 0 40px;">
@@ -75,35 +77,29 @@
             <h1>Dicas e curiosidades</h1>
         </div>
         <div class="fundo">
-            <div class="banner-dica1">
-                <p>Dica</p>
-                <p>Ao derrubar uma árvore, destrua as folhagens e colete os brotos, que você pode usar para
-                    replanta-las. Cave um buraco de 2 (dois) blocos de profundidade e coloque o broto, que se tornará
-                    uma árvore muito maior do que se você o plantar em um buraco de 1 (um) bloco de profundidade. Leva 1
-                    (um) dia para o broto virar a árvore adulta.</p>
-            </div>~
-            <div class="banner-dica2">
-                <p>Você sabia?</p>
-                <p>A versão Alfa de Minecraft foi criada em 16 de maio de 2009 e publicada 1 dia depois. O
-                    desenvolvimento do jogo prosseguiu após seu lançamento, com diversas atualizações
-                    posteriores.<br>Minecraft foi criado por um programador sueco chamado Markus Persson. No mesmo ano
-                    (2009), Persson também fundou a empresa Mojang, a grande responsável pela criação e posterior
-                    desenvolvimento de Minecraft.</p>
+            <div class="container-slider">
+                <button id="prev-button"><img src="./assets/images/arrow.png" alt="prev-button"></button>
+                <div class="container-images">
+                  <img src="./assets/imgs/background-image-minecraft-login.jpeg" alt="Paisagem minecraft" class="slider on">
+                  <img src="https://wallpaperaccess.com/full/2915377.jpg" alt="Paisagem minecraft" class="slider">
+                  <img src="https://wallpapercave.com/wp/wp6746829.jpg" alt="girl" class="slider">
                 </div>
+                <button id="next-button"><img src="./assets/images/arrow.png" alt="next-button"></button>
+              </div>
+            
+        </div>
+        <!--footer inicio-->
+        <div class="footer">
+            <div class="container">
+                <h4>Feito com amor por um aluno &hearts; SPTech &copy; 2022
+                    <br>
+                    <span class="version">
+                        v1.0.0
+                    </span>
+                </h4>
             </div>
         </div>
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno &hearts; SPTech &copy; 2022
-                <br>
-                <span class="version">
-                    v1.0.0
-                </span>
-            </h4>
-        </div>
-    </div>
-    <!--footer fim-->
+        <!--footer fim-->
 </body>
 
 </html>

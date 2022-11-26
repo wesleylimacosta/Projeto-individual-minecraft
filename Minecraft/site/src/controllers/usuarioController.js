@@ -101,9 +101,64 @@ function cadastrar(req, res) {
     }
 }
 
+function  RespostasQUIZ(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    // A variavel a ser criada tem que fazer parte da tabela do banco de dados, ja que aqui é um dos passos para configurar o sistema de cadastro
+    var parte1 = req.body.parte1Server;
+    var parte2 = req.body.parte2Server;
+    var parte3 = req.body.parte3Server;
+    var parte4 = req.body.parte4Server;
+    var parte5 = req.body.parte5Server;
+    var pontos = req.body.pontosServer;
+    var ID_USUARIO = req.body.ID_USUARIOServer;
+
+    // Faça as validações dos valores
+    if (parte1 == '') {
+        res.status(400).send("Algum quiz não foi preenchido");
+    } else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.RespostasQUIZ(parte1,parte2,parte3,parte4,parte5,pontos,ID_USUARIO)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function media(req, res) {
+    // Pesquisar req.params
+    usuarioModel.media()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    RespostasQUIZ,
+    media,
     testar
 }

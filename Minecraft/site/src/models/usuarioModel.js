@@ -4,6 +4,7 @@ function listar() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
         SELECT * FROM usuario;
+        SELECT * FROM quiz;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -32,17 +33,29 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucao);
 }
 
- // Aqui fica o insert das respostas do usuario na tabela quiz
-function RespostasQUIZ(parte1, parte2, parte3, parte4, parte5) {
-
+// Aqui fica o insert das respostas do usuario na tabela quiz
+function RespostasQUIZ(parte1, parte2, parte3, parte4, parte5, pontos,ID_USUARIO) {
     var instrucao = `
-        INSERT INTO quiz (parte1,parte2,parte3,parte4,parte5) VALUES ('${parte1}','${parte2}', '${parte3}', '${parte4}', '${parte5}');
-    `;
+    insert into quiz (parte1,parte2,parte3,parte4,parte5,pontos,fkUsuario) values
+    ('${parte1}','${parte2}','${parte3}','${parte4}','${parte5}','${pontos}','${ID_USUARIO}');
+`;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function media() {
+    // console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao = `
+    SELECT AVG(pontos) as 'media' from quiz;`
+    ;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
 }
 
 module.exports = {
     entrar,
     cadastrar,
     RespostasQUIZ,
+    media,
     listar,
 };

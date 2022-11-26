@@ -10,11 +10,18 @@ CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha VARCHAR(50),
+    fkQuiz int,
+    foreign key (fkQuiz) references quiz(idQuiz)
 );
 
-
-select * from usuario;
-
-
+create table quiz(
+idQuiz int primary key auto_increment,
+parte1 varchar(45),
+parte2 varchar(45),
+parte3 varchar(45),
+parte4 varchar(45),
+parte5 varchar(45),
+pontos double
+);
 
