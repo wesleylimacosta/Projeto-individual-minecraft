@@ -11,79 +11,121 @@ a{
   text-decoration: none;
   color: #fff;
 }
-header {
+/* GERAL */
+.janela {
   display: flex;
-  border-bottom: 3px solid #000000;
-  font-family:'Minecraft';
-  background-color: rgb(77, 71, 71);
+  width: 100vw;
 }
 
-.dash {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 3px solid #000000;
+.header-left a {
+  text-decoration: none;
+  color: white;
 }
 
-
-.dash .container {
-  margin: 0 auto;
-  margin-right: 15em;
+.header-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 20%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: space-between;
-  font-family:'Minecraft';
+  border-right: 3px solid #32b9cd;
+  background-color: #212124;
+  /* border: 3px solid pink; */
 }
 
+.dash-right {
+  display: flex;
+  width: 80%;
+  height: fit-content;
+  background-color: #161618;
+  position: relative;
+  top: 0;
+  left: 25%;
+}
 
-.agora {
+.header-left h1 {
+  color: #32b9cd;
+}
+
+.hello {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hello h3 {
+  color: #e3b062;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.hello h3 span {
   font-weight: 800;
 }
 
- .esquerda{
-  margin-top: 20px;
-  margin-left: 12%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  color: #fff;
-
+.btn-nav {
+  width: 40%;
+  color: white;
+  background-color: #e6005a;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2% 5%;
 }
 
-.navbar {
-  margin-left: 40px;
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  color: #fff;
+.btn-nav-white {
+  width: 40%;
+  background-color: white;
+  border: 3px solid #e6005a;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2% 5%;
 }
 
-
-.titulo {
-  color: #fff;
-  margin-left: 5%;
-  font-weight: 400;
-  font-size: 30px;
+.btn-nav-white h3 {
+  color: #e6005a;
+  padding: 0;
+  margin: 0;
 }
 
+.btn-nav h3,
+.btn-logout h3 {
+  margin: 0;
+  padding: 0;
+}
 
+.btn-logout {
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #32b9cd;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 15px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
 
 /* BANNER */
 
 .banner {
-  height: fit-content;
-  padding: 200px 0;
+  width: 100%;
+  height:100%;
   background-image: url('../assets/imgs/dirt-background.jpeg');
-  background-size: 200%;
+  background-size: 100%;
   background-repeat: no-repeat;
+  bottom: 10em;
+  position: relative;
 }
 
 .banner .container {
   font-size: 50px;
-  height: 200px;
+  height:100px;
   text-align: justify;
   margin-left:200px;
   margin-top: 100px;
@@ -100,9 +142,8 @@ header {
   background-image: url('https://www.quizexpo.com/wp-content/uploads/2020/07/cover-2-850x491.jpg');
   background-repeat: no-repeat;
   position: relative; 
-  bottom: 5em;
-  left: 2em;
   border-radius: 12px;
+  top: 3em;
 }
 
 
@@ -112,9 +153,8 @@ header {
   background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/06/minecraft-mobs.jpg');
   background-repeat: no-repeat;
   position: relative; 
-  bottom: 5em;
-  left: 2em;
   border-radius: 12px;
+  top: 3em;
 }
 .pt1 p{
   color: #fff;
@@ -124,33 +164,32 @@ header {
 }
 
 .pt2{
-  width: 15.5em;
+  width: 15em;
   height: 8em;
   background-image: url('https://images.free3d.com/imgd/l7/5b35124126be8b2b788b4567/5487-minecraft-pickaxe.png');
   background-repeat: no-repeat;
   position: relative; 
-  bottom: 5em;
-  left: 2em;
   border-radius: 12px;
+  top:3em;
 }
 .pt2 p{
   color: #fff;
   text-align: center;
   font-size: 1em;
-  right: 1em;
+  bottom: 0.2em;
+  position: relative;
   text-shadow: 10px 10px 10px #000;
 
 }
 
 .pt3{
-  width: 15.5em;
+  width: 15em;
   height: 8em;
   background-image: url('https://xforgeassets002.xboxlive.com/pf-title-b63a0803d3653643-20ca2/254e36a7-4f41-4063-9386-23b3f9576d06/RestaurantSim_screenshot_3.jpg');
   background-repeat: no-repeat;
   position: relative; 
-  bottom: 5em;
-  left: 2em;
   border-radius: 12px;
+  top: 3em;
 }
 .pt3 p{
   color: #fff;
@@ -161,14 +200,13 @@ header {
 }
 
 .pt4{
-  width: 15.5em;
+  width: 15em;
   height: 8em;
   background-image: url('https://cutewallpaper.org/24/steve-minecraft-png/minecraft-steve-sword-free-image-on-pixabay.png');
   background-repeat: no-repeat;
   position: relative; 
-  bottom: 5em;
-  left: 2em;
   border-radius: 12px;
+  top: 3em;
 }
 .pt4 p{
   color: #fff;
@@ -185,9 +223,8 @@ header {
   background-image: url('https://www.esports.net/br/wp-content/uploads/sites/3/2022/10/servidores-minecraft-2022.jpg');
   background-repeat: no-repeat;
   position: relative; 
-  bottom: 5em;
-  left: 2em;
   border-radius: 12px;
+  top:3em;
 }
 .pt5 p{
   color: #fff;
@@ -203,18 +240,26 @@ header {
   background-image: url('https://i2.moyens.net/pt/images/2021/08/1627906633_587_As-5-melhores-coisas-sobre-o-fim-do-Minecraft.jpg');
   background-repeat: no-repeat;
   position: relative; 
-  bottom: 5em;
-  left: 2em;
   border-radius: 12px;
+  top: 3em;
+  right: 0.5em;
 }
 
-.fim p,span {
+.fim span {
   font-size: 0.5em;
   font-family: sans-serif;
   color: #fff;
   position: relative;
-  top: 5em;
 }
+
+#b_pontos{
+font-size: 1em;
+margin-right: 0.2em;
+}
+#b_media{
+  font-size: 1em;
+  margin-right: 0.2em;
+  }
 .fim h3{
   font-size: 0.5em;
   font-family: sans-serif;
@@ -233,8 +278,8 @@ header {
 
 .in_input{
   position: relative;
-  top: 13em;
-  left: 2em;
+  top: 16em;
+  left: 17em;
   border-radius: 12px;
   height: 2em;
   text-align: center;
@@ -243,15 +288,94 @@ header {
 
 .in_btn{
   position: relative;
-  top: 13em;
-  left: 2em;
+  top: 16em;
+  left: 17em;
+  height: 2em;
+  width: 5em;
+  cursor: pointer;
+}
+
+.in_input2{
+  position: relative;
+  top: 16em;
+  left: 17em;
   border-radius: 12px;
   height: 2em;
+  text-align: center;
+  align-items: center;
 }
-.in_lista{
+
+.in_btn2{
   position: relative;
-  left: 4em;
-  bottom: 2em;
+  top: 16em;
+  left: 17em;
+  height: 2em;
+  width: 5em;
+  cursor: pointer;
+}
+
+.in_input3{
+  position: relative;
+  top: 22em;
+  left: 17em;
+  border-radius: 12px;
+  height: 2em;
+  text-align: center;
+  align-items: center;
+}
+
+.in_btn3{
+  position: relative;
+  top: 22em;
+  left: 17em;
+  height: 2em;
+  width: 5em;
+  cursor: pointer;
+}
+
+
+.in_input4{
+  position: relative;
+  top: 22em;
+  left: 17em;
+  border-radius: 12px;
+  height: 2em;
+  text-align: center;
+  align-items: center;
+}
+
+.in_btn4{
+  position: relative;
+  top: 22em;
+  left: 17em;
+  height: 2em;
+  width: 5em;
+  cursor: pointer;
+}
+
+.in_input5{
+  position: relative;
+  top: 18em;
+  left: 17em;
+  border-radius: 12px;
+  height: 2em;
+  text-align: center;
+  align-items: center;
+}
+
+.in_btn5{
+  position: relative;
+  top: 18em;
+  left: 17em;
+  height: 2em;
+  width: 5em;
+  cursor: pointer;
+}
+
+.in_lista  {
+  position: relative;
+  left: 0.4em;
+  bottom: 2.5em;
 }
 
 .quiz button{
@@ -260,9 +384,9 @@ header {
   border-radius: 12px;
   text-align: center;
   position: relative;
-  left: 32em;
-  bottom: 18em;
+  left: 24em;
   cursor: pointer;
+  top: 7em;
   
 }
 
