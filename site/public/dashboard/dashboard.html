@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/icon/minecraft-icone-icon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mineland | Quiz</title>
+
+    <link rel="stylesheet" href="../css/dashboards.css">
+    <link rel="stylesheet" href="../css/Quiz.css">
+    <link rel="stylesheet" href="">
+    <script src="../js/funcoes.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="janela">
+
+
+        <div class="header-left dash-header">
+
+            <h1>MINELAND</h1>
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav">
+                <a href="cards.html">
+                    <h3>QUIZ</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="">
+                    <h3>Mini-game</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./mural.html">
+                    <h3>Feedback</h3>
+                </a>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+        <div class="dash">
+            <div class="banner">
+                <div class="container">
+                    <div class="luta" id="luta" style="display:block">
+                        <img src="https://static.vecteezy.com/ti/vetor-gratis/p3/7243548-conceito-de-fundo-de-ringue-de-boxe-gratis-vetor.jpg"
+                            id="ringue">
+                        <span class="lutadores" id="mobJogador"></span>
+                        <span class="lutadores" id="mobMaquina"></span>
+                        <div id="resultado"></div>
+                        <div id="pontosJ">
+                            Pontos jogador: <span id="in_jogador">0</span><br>
+                        <div id="pontosM">
+                            Pontos Maquina: <span id="in_maquina">0</span><br>
+                        <button onclick="batalhar()">Batalhar</button>
+                    </div>
+                    <div id="status">
+                        <span>Creeper: Força = 1.5, resistencia = 0</span><br>
+                        <span>Zombie: Força: 2.5, resistencia : 2</span><br>
+                        <span>Esqueleto: Força = 1.5, resistencia = 3.5</span><br>
+                        <span>Aranha: Força = 3 , resistencia = 4</span><br>
+                        <span>Warden: Força = 7, resistencia = 5</span><br>
+                        <span>Golem: Força = 7, resistencia = 6</span><br>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+    </div>
+    </div>
+
+
+</body>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
+    var mobs = [
+        {
+            imagem: `<img src="../assets/images/minigame/creeperGif.gif" style="height:200px">`,
+            nome: 'Creeper',
+            força: 1.5,
+            resistencia: 1,
+        },
+        {
+            imagem: `<img src="../assets/images/minigame/zombieGif.gif" style="height:200px">`,
+            nome: 'Zombie',
+            força: 2.5,
+            resistencia: 2,
+        },
+        {
+            imagem: `<img src="../assets/images/minigame/esqueletoPNG.png" style="height:200px">`,
+            nome: 'Esqueleto',
+            força: 2.5,
+            resistencia: 3,
+        },
+        {
+            imagem: `<img src="../assets/images/minigame/wardenGif.gif" style="height:200px">`,
+            nome: 'Warden',
+            força: 7,
+            resistencia: 5,
+        },
+        {
+            imagem: `<img src="../assets/images/minigame/wardenGif.gif" style="height:200px">`,
+            nome: 'Aranha',
+            força: 3,
+            resistencia: 4,
+        },{
+            imagem: `<img src="../assets/images/minigame/golemGif.gif" style="height:200px">`,
+            nome: 'Golem',
+            força: 7,
+            resistencia: 6,
+        }
+    ]
+
+    var jogador = 0
+    var maquina = 0
+
+    function batalhar() {
+        var time1 = parseInt(Math.random() * 6)
+        var time2 = parseInt(Math.random() * 6)
+
+        var danoTime1 = mobs[time1].força - mobs[time2].resistencia
+        var danotime2 = mobs[time2].força - mobs[time1].resistencia
+
+        mobJogador.innerHTML = `${mobs[time1].imagem}    VS`
+        mobMaquina.innerHTML = mobs[time2].imagem
+
+        if (danoTime1 > danotime2) {
+            resultado.innerHTML = `O mob '${mobs[time1].nome}'' venceu esta batalha! Ponto para o jogador!`
+            jogador++
+            in_jogador.innerHTML = jogador
+        } else if (danotime2 > danoTime1) {
+            resultado.innerHTML = `O mob '${mobs[time2].nome}'' venceu esta batalha! Ponto para a maquina`
+            maquina++
+            in_maquina.innerHTML = maquina
+        } else if (danotime2 == danoTime1) {
+            resultado.innerHTML = `Está luta resultou em empate! Ponto para ambos!`
+
+            jogador++
+            maquina++
+
+            in_jogador.innerHTML = jogador
+            in_maquina.innerHTML = maquina
+
+
+        }
+    }
+</script>
+
+</html>
