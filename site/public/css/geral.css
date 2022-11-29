@@ -263,3 +263,30 @@ header {
   font-size: 12px;
   font-family: "sans-serif";
 }
+
+/* Pagina sobre */
+
+.fundo-sobre{
+  padding: 100px 0;
+  background-image: url('../assets/imgs/dirt-background.jpeg');
+}
+
+.fundo-sobre .container{
+  position: relative;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.fundo-sobre .container button{
+  position: relative;
+  left: 23em;
+  top: 0.3em;
+  font-size: 1.3em;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.resultado{
+  position: relative;
+  left: 17em;
+  bottom: 13em;
+}

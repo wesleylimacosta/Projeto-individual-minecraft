@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mineland | Página Inicial</title>
+
+    <script src="./js/funcoes.js"></script>
+    <script src="./js/carrousel.js" defer></script>
+
+    <link rel="icon" href="./assets/icon/minecraft-icone-icon.ico">
+    <link rel="stylesheet" href="./css/geral.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+</head>
+
+<body>
+
+    <header class="dash">
+        <ul class="esquerda">
+            <li style="margin: 0 5px;">
+                <a href="./simulador.html">Quiz</a>
+            </li>
+            <li>|</li>
+            <li style="margin: 0 35px;">
+                <a href="https://www.minecraft.net/pt-pt/store/minecraft-java-bedrock-edition-pc"
+                    target="_blank">Adquira</a>
+            </li>
+            <li>|</li>
+            <li style="margin: 0 40px;">
+                <a href="">Sobre</a>
+            </li>
+
+        </ul>
+        <h1 class="titulo"><a href="./index.html">Mineland</a></h1>
+        <div class="container">
+            <ul class="navbar">
+                <li>
+                    <a href="index.html#banner-dica">Dicas</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="./login.html">Login</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="fundo-sobre">
+        <div class="container">
+                <button onclick="sobre()">Sobre mim</button>
+                <img src="file:///C:/Users/wesley/Downloads/209864573_573967290430004_952016580743623306_n.jpg" style="height:400px;width:300px;position:relative;right:5em;">
+                <div><span id="resultado" class="resultado" style="font-family:sans-serif"></span></div>
+                
+        </div>
+    </div>
+    <!--footer inicio-->
+    <div class="footer">
+        <div class="container">
+            <h4>Feito com amor por um aluno &hearts; SPTech &copy; 2022
+                <br>
+                <span class="version">
+                    v1.0.0
+                </span>
+            </h4>
+        </div>
+    </div>
+    <!--footer fim-->
+</body>
+
+</html>
+<script>
+    var sobreMim = [
+        {
+            sobre: 'Olá, me chamo Wesley e tenho 18 anos!<br>'
+        },{
+            sobre: 'Estou cursando o 1° semestre de ADS na SPTECH SCHOOL! <br>'
+        },{
+            sobre: 'Fiz este site com intuito de aprender mais sobre programação e tambem para entreter as pessoas<br><br>'
+        },{
+            sobre: 'Alguns dos meus valores são:<br><br>'
+        },{
+            sobre: '- Respeito <br> - Honestidade <br> - Empatia'
+        }
+    ]
+     function sobre(){
+    resultado.innerHTML = ''
+
+
+    for(var contador = 0; contador < sobreMim.length; contador++){
+        resultado.innerHTML += sobreMim[contador].sobre
+}
+}
+</script>
