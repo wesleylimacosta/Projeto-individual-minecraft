@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload=" atualizacaoPeriodica()">
+<body onchange="media()">
 
     <div class="janela">
 
@@ -134,7 +134,8 @@
 </body>
 
 <script>
-    window.onload = media()
+    b_media.innerHTML = sessionStorage.MEDIA_USUARIOS
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
     var parte1Var = ''
     var parte2Var = ''
@@ -342,8 +343,9 @@
 
         return false;
     }
-
+    
     function media() {
+        b_media.innerHTML = sessionStorage.MEDIA_USUARIOS
 
         fetch(`/usuarios/media`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
@@ -361,7 +363,6 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
 
-        b_media.innerHTML = sessionStorage.MEDIA_USUARIOS
     }
 
 </script>

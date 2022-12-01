@@ -91,7 +91,6 @@ header {
 }
 
 .banner .container {
-  font-size: 50px;
   text-align: justify;
   margin-left: 200px;
   margin-top: 100px;
@@ -153,35 +152,6 @@ header {
   text-align: center;
 }
 
-.banner-dica1 {
-  background-color: #000000;
-  color: #fff;
-  font-size: 2em;
-  top: 0.2em;
-  width: 30em;
-  height: 12em;
-  align-items: center;
-  text-align: center;
-  border-radius: 12px;
-  position: relative;
-  border: 3px solid #fff;
-}
-
-.banner-dica2 {
-  background-color: #000000;
-  color: #fff;
-  font-size: 2em;
-  width: 30em;
-  height: 12em;
-  position: relative;
-  left: 12em;
-  align-items: center;
-  text-align: center;
-  border-radius: 12px;
-  margin-bottom: 0.2em;
-  border: 3px solid #fff;
-
-}
 
 .fundo {
   background-image: url('../assets/imgs/dirt-background.jpeg');
@@ -241,7 +211,6 @@ header {
 /* FOOTER */
 
 .footer {
-  font-family: "sans-serif";
   background-color: #000000;
   height: 100px;
   color: #fff;
@@ -249,20 +218,23 @@ header {
   font-size: 15px;
   display: flex;
   align-items: center;
-  border-top: 3px solid blue;
 }
 
 .footer .container {
+  font-family: sans-serif;
   justify-content: center;
   text-align: center;
   margin-left: 550px;
-  font-family: "sans-serif";
 }
+h4{
+  position: relative;
+  bottom: 3em;
 
+}
 .footer .container .version {
   font-size: 12px;
-  font-family: "sans-serif";
 }
+
 
 /* Pagina sobre */
 
